@@ -1,14 +1,11 @@
 
-import os
 import json
 from pprint import pprint
 
 import requests
-from dotenv import load_dotenv 
 
-load_dotenv()
+from app.alpha import API_KEY
 
-API_KEY = os.getenv("ALPHADVANTAGE_API_KEY")
 
 request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
 

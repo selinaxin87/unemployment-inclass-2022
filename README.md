@@ -1,6 +1,7 @@
 # unemployment-inclass-2022
 
-## Set up
+
+## Setup
 
 
 Create and activate a virtual environment:
@@ -17,6 +18,19 @@ Install package dependencies:
 pip install -r requirements.txt
 ```
 
+## Configuration
+
+
+[Obtain an API Key](https://www.alphavantage.co/support/#api-key) from AlphaVantage.
+
+Then create a local ".env" file and provide the key like this:
+
+```sh
+# this is the ".env" file...
+
+ALPHAVANTAGE_API_KEY="_________"
+```
+
 
 ## Usage
 
@@ -29,11 +43,18 @@ python app/my_script.py
 Run the unemployment report:
 
 ```sh
-python app/unemployment.py
-```
+#python app/unemployment.py
 
 # or pass env var from command line:
+#ALPHAVANTAGE_API_KEY="______" python app/unemployment.py
 
-ALPHAVANTAGE_API_KEY="____" python app/unemployment.py
+python -m app.unemployment
+```
 
+Run stocks report:
+
+```sh
+#python app/stocks.py
+
+python -m app.stocks
 ```
